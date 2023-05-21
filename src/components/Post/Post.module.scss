@@ -3,7 +3,7 @@
 .container {
   @include flex(row, stretch, flex-start, 1.6rem);
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba($color: $dark, $alpha: 0.3);
+  border-bottom: 1px solid var(--border);
   padding-bottom: 1rem;
 
   & > img {
@@ -20,7 +20,7 @@
 
     & > h2 {
       @include font(1.6rem, 400);
-      color: $link;
+      color: var(--link);
       margin-bottom: 0.6rem;
     }
     & > p {
@@ -29,7 +29,7 @@
       & > span {
         @include font(1.4rem);
         margin-bottom: 0.6rem;
-        color: $dark;
+        color: var(--dark);
 
         overflow: hidden;
         text-overflow: ellipsis;
@@ -45,12 +45,12 @@
         @include flex(row, center, flex-start, 1.6rem);
         & > span {
           padding: 0.3rem 0.6rem;
-          background-color: rgba($color: $link, $alpha: 0.1);
-          color: $link;
+          background-color: var(--light-gray);
+          color: var(--link);
         }
       }
       & > span {
-        color: rgba($color: $dark, $alpha: 0.7);
+        color: var(--dark);
       }
     }
   }

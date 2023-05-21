@@ -1,20 +1,32 @@
 // Colors
-$primary: #007bff;
-$secondary: #6c757d;
-$success: #28a745;
-$danger: #dc3545;
-$warning: #ffc107;
-$info: #17a2b8;
-$light: #f8f9fa;
-$dark: #343a40;
-$link: #007bff;
-$white: #fff;
-$black: #000;
-$light-gray: #e8e8e8;
-$shadow-color: rgba(
-  $color: $black,
-  $alpha: 0.1,
-);
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --link: #007bff;
+  --white: #fff;
+  --black: #000;
+  --light-gray: #e8e8e8;
+  --bgColor: var(--white);
+  --shadow-color: #0000001a;
+  --border: #343a404d;
+}
+
+body.dark {
+  --dark: #adb5bd;
+  --bgColor: #212529;
+  --white: #000;
+  --black: #fff;
+  --light: #121313;
+  --light-gray: #1f1f1f;
+  --shadow-color: #ffffff1a;
+  --border: #adb5bd4d;
+}
 // Spacing
 $spacing: 0.4rem;
 

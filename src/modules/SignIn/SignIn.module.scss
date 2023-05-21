@@ -5,7 +5,7 @@
   min-height: 100vh;
 
   & > .container {
-    background-color: $light;
+    background-color: var(--light);
     @include radius(1rem);
     padding: 5rem;
     width: 95vw;
@@ -14,7 +14,7 @@
 
     & > h1 {
       @include font(3rem, 600);
-      @include text($dark, center);
+      @include text(var(--dark), center);
       margin-bottom: 3rem;
     }
 
@@ -22,26 +22,26 @@
       @include flex(column, stretch, flex-start, 1.6rem);
       margin-bottom: 1.6rem;
       & > input {
-        @include border($light-gray);
+        @include border(var(--light-gray));
         padding: 1.2rem 2.4rem;
         @include radius(0.5rem);
         outline: none;
-        color: $link;
-        background-color: $light;
+        color: var(--link);
+        background-color: var(--light);
         &:hover {
-          background-color: $white;
+          background-color: var(--white);
         }
         &:focus {
-          @include border($link);
-          background-color: $white;
+          @include border(var(--link));
+          background-color: var(--white);
           &::placeholder {
-            color: $link;
+            color: var(--link);
           }
         }
       }
 
       & > .error {
-        @include text($danger, center);
+        @include text(var(--danger), center);
         @include font(1.4rem, 500);
         display: none;
         &.show {
@@ -52,11 +52,11 @@
       & > button {
         outline: none;
         border: none;
-        background-color: $link;
+        background-color: var(--link);
         padding: 1.2rem 2.4rem;
         @include radius(0.5rem);
         cursor: pointer;
-        @include text($light, center, uppercase);
+        @include text(var(--light), center, uppercase);
         @include font(1.4rem, 500);
         &:hover {
           opacity: 0.9;
@@ -65,9 +65,9 @@
         &.google {
           @include center();
           gap: 1.6rem;
-          background-color: $light;
-          color: $dark;
-          @include shadow($shadow-color);
+          background-color: var(--light);
+          color: var(--dark);
+          @include shadow(var(--shadow-color));
 
           & > span {
             @include center();
@@ -78,11 +78,11 @@
     }
 
     & > p {
-      @include text($dark, center);
+      @include text(var(--dark), center);
       @include font(1.2rem);
 
       & > a {
-        @include text($link);
+        @include text(var(--link));
 
         &:hover {
           text-decoration: underline;

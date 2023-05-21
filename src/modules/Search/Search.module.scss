@@ -8,7 +8,7 @@
 
   & > h1 {
     padding: 3rem 0;
-    @include text($dark, center);
+    @include text(var(--dark), center);
     @include font(4rem, 600);
   }
 
@@ -17,7 +17,7 @@
     margin-bottom: 1.6rem;
     & > span {
       @include font(1.6rem, 500);
-      color: $dark;
+      color: var(--dark);
     }
 
     & .filter {
@@ -26,7 +26,7 @@
       cursor: pointer;
       @include font(2rem);
       border: none;
-      color: $dark;
+      color: var(--dark);
 
       &.selected {
         color: #f48024;
@@ -39,7 +39,7 @@
 
     & > p {
       @include font(1.6rem);
-      color: $dark;
+      color: var(--dark);
       text-align: center;
     }
   }

@@ -3,12 +3,13 @@ import { Link, useNavigate } from 'react-router-dom'
 import { MdSearch, MdOutlineClose } from 'react-icons/md'
 import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import styles from './Header.module.scss'
 import { useHeaderStore } from '../../store'
 
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    const { searchText, onSearchTextChange, isLoading } = useHeaderStore(store => store)
+    const { searchText, onSearchTextChange, isLoading, isDark, setIsDark } = useHeaderStore(store => store)
     const navigate = useNavigate();
 
     const onFormSubmit = e => {
@@ -34,6 +35,7 @@ const Header = () => {
                     {isLoading ? <AiOutlineLoading3Quarters className={styles.rotate} /> : <MdSearch />}
                 </form>
                 <div className={styles.buttons}>
+                    <button title='Mode' onClick={e => setIsDark()}>{isDark ? <BsFillMoonFill /> : <BsFillSunFill />}</button>
                     <Link to="/signin">Sign In</Link>
                     <Link to="/signup">Sign Up</Link>
                 </div>

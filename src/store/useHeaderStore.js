@@ -7,6 +7,8 @@ const headerStore = (set, get) => ({
   searchResults: [],
   searchText: "",
   isLoading: false,
+  isDark: null,
+
   setSearchText: (searchText) => {
     set(() => ({ searchText }));
   },
@@ -32,6 +34,10 @@ const headerStore = (set, get) => ({
     }));
     navigate("/search");
   }, 500),
+
+  setIsDark: (isDark) => {
+    set(() => ({ isDark: isDark ?? !get().isDark }));
+  },
 });
 
 export default create(devtools(headerStore));

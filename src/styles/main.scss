@@ -29,6 +29,10 @@ html {
   }
 }
 
+body {
+  background-color: var(--bgColor);
+}
+
 a {
   text-decoration: none;
   color: inherit;
