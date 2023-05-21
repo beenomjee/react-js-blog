@@ -1,0 +1,57 @@
+@import "../../styles";
+
+.container {
+  @include flex(row, stretch, flex-start, 1.6rem);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba($color: $dark, $alpha: 0.3);
+  padding-bottom: 1rem;
+
+  & > img {
+    width: 30%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0.5rem;
+  }
+
+  & > div {
+    flex: 1;
+    @include flex(column, stretch, flex-start);
+
+    & > h2 {
+      @include font(1.6rem, 400);
+      color: $link;
+      margin-bottom: 0.6rem;
+    }
+    & > p {
+      flex: 1;
+
+      & > span {
+        @include font(1.4rem);
+        margin-bottom: 0.6rem;
+        color: $dark;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    & > .bottom {
+      @include flex(row, center, space-between);
+      & > .left {
+        @include flex(row, center, flex-start, 1.6rem);
+        & > span {
+          padding: 0.3rem 0.6rem;
+          background-color: rgba($color: $link, $alpha: 0.1);
+          color: $link;
+        }
+      }
+      & > span {
+        color: rgba($color: $dark, $alpha: 0.7);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../styles";
+
+.container {
+  background-color: $light;
+  text-align: center;
+  padding: 2rem;
+  @include font(1.6rem);
+  margin-top: 3rem;
+  color: $dark;
+}

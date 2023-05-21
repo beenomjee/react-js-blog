@@ -1,0 +1,46 @@
+@import "../../styles";
+
+.container {
+  width: 900px;
+  max-width: 95vw;
+  margin: 0 auto;
+  min-height: calc(100vh - 6rem);
+
+  & > h1 {
+    padding: 3rem 0;
+    @include text($dark, center);
+    @include font(4rem, 600);
+  }
+
+  & > .bottom {
+    @include flex(row, center, space-between);
+    margin-bottom: 1.6rem;
+    & > span {
+      @include font(1.6rem, 500);
+      color: $dark;
+    }
+
+    & .filter {
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      @include font(2rem);
+      border: none;
+      color: $dark;
+
+      &.selected {
+        color: #f48024;
+      }
+    }
+  }
+
+  & > .postContainer {
+    width: 100%;
+
+    & > p {
+      @include font(1.6rem);
+      color: $dark;
+      text-align: center;
+    }
+  }
+}
